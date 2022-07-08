@@ -18,8 +18,9 @@ app.use(session({
     secret: 'secret',
 }));
 
-// Step 2
-// app.use(???)
+// Step 2, integramos el middleware del carrito
+// step 3 en controller 
+app.use(require('./middlewares/cart.js'));
 
 app.use(require('./routes/main.routes'))
 app.use('/checkout',require('./routes/checkout.routes'))
